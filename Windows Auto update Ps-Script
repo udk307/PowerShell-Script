@@ -1,0 +1,13 @@
+Set-ExecutionPolicy Bypass -Force
+Install-PackageProvider -Name "nuget" -RequiredVersion "2.8.5.201" -Force
+Install-Module PSWindowsUpdate -Force
+Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -AutoReboot | Out-File "C:\MSUpdates.log" -Force
+
+
+#Help---
+#Find-PackageProvider -Name "nuget" -AllVersions
+#Install-PackageProvider -Name "nuget" -RequiredVersion "2.8.5.205" -Force
+#Install-PackageProvider -Name NuGet -Force
+#Install-PackageProvider -Name NuGet -RequiredVersion 2.8.5.201 -Force
+#Install-PakageProvider -Name NuGet-MinimumVersion 2.8.5.201 -Force
+#Add-WUServiceManager -MicrosoftUpdate
