@@ -17,4 +17,4 @@ else {
         Install-Module PSWindowsUpdate -Force
 }
 Install-WindowsUpdate -MicrosoftUpdate -AcceptAll | Out-File "C:\WindowsUpdates.log" -Force |
-Shutdown.exe /F /R /T 120
+Shutdown.exe /R /T 120
